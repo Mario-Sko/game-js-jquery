@@ -1,0 +1,241 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+ <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script> 
+  
+<!-- google fonts -->
+<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">   
+
+<!-- fontawesome fo the pieces -->   
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  
+<script src="board.js"></script>
+ <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+	<div id="overlayBackground" class="overlayBackgroundDesign">
+		<div class="overlayDesign">
+			<div class="container-fluid">
+				<div class="row form-group formDesign">
+					<div class="col-1"></div>
+					<div class="col-5">First Player:</div>
+					<div class="col-5">
+						<input id="playerName1" class="form-control inputDesign" type="text"  name="player1Form" placeholder="Player 1" maxlength="15">
+					</div>
+					<div class="col-1"></div>
+				</div>
+				<div class="row form-group formDesign">
+					<div class="col-1"></div>
+					<div class="col-5">Second Player:</div>
+					<div class="col-5">
+						<input id="playerName2" class="form-control inputDesign" type="text"  name="player2Form" placeholder="Player 2" maxlength="15">
+					</div>
+					<div class="col-1"></div>
+				</div>
+				<div class="row form-group formDesign">
+					<div class="col-1"></div>
+					<div class="col-5">
+						<button class="button btn overlayButtonDesign" onclick="OverlayClose()">Cancel</button>
+					</div>
+					<div class="col-5">
+						<button class="button btn overlayButtonDesign" onclick="Namechange()">Save</button>
+					</div>
+					<div class="col-1"></div>
+				</div>
+			</div>	
+		</div>
+	</div>
+	<div id="overlaybackgroundFight" class="overlayBackgroundDesign" >
+		<div class="overlayDesign">
+			<div class="row form-group formDesign">
+				<div class="col-1"></div>
+				<div class="col-5">Player's Name:</div>
+				<div id ="playerNameFight" class="col-5"></div>
+				<div class="col-1"></div>
+			</div>
+			<div class="row form-group formDesign">
+				<div class="col-1"></div>
+				<div class="col-5">Fighting Power:</div>
+				<div id="weaponDamage" class="col-5"></div>
+				<div class="col-1"></div>
+			</div>
+			<div class="row form-group formDesign">
+				<div class="col-1"></div>
+				<div class="col-5">
+					<button id="defend" class="button btn overlayButtonDesign">Defend</button>
+					</div>
+					<div class="col-5">
+						<button id="attack" class="button btn overlayButtonDesign">Attack</button>
+					</div>
+					<div class="col-1"></div>
+				</div>
+			</div>	
+		</div>
+	</div>
+	<div id="overlaybackgroundDeath" class="overlayBackgroundDesign" >
+		<div class="overlayDesign">
+			<div class="row form-group formDesign">
+				<div class="col-1"></div>
+				<div id ="playerNameDeath" class="col-10 textDeath"></div>
+				<div class="col-1"></div>
+				<button class="button btn buttonDesign buttonDeath" onclick="start()">Restart</i></button>
+			</div>	
+		</div>
+	</div>		
+	<nav>
+			<ul class="nav navbarBeamDesign">
+				<li><button class="button btn buttonDesign" onclick="start()"><i class="fas fa-play"></i></button></li>
+				<li>
+					<button class="button btn  buttonDesign" onclick="OverlayOpen()"><i class="fas fa-user-edit"></i>
+						
+					</button>
+				</li>
+				<li id="nameOfPlayer1" class="playerNameDesign player1Name">Player 1</li>
+				<li><i class="fas fa-heart heartDesign"></i></li>
+				<li class="progress progressDesign">
+					<div id="energyPlayer1" class="progress-bar progressBarDesign" role="progressbar"  style="width:100%">100 %
+					</div>
+				</li>
+				<li id="WeaponOfPlayer1" class ="weaponBorderDesign weaponBorderPlayer1"></li>
+				<li id="nameOfPlayer2" class="playerNameDesign player2Name">Player 2</li>
+				<li><i class="fas fa-heart heartDesign"></i></li>
+				<li class="progress progressDesign">
+					<div id="energyPlayer2" class="progress-bar progressBarDesign" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:100%"> 100 %
+					</div>
+				</li>
+				<li id="WeaponOfPlayer2" class = "weaponBorderDesign weaponBorderPlayer2"></li>
+	</nav>
+<div id="createNewPlay" class="board">
+ <div id="removeBoard">
+	<div class="fieldRow">
+      <div class="field" id="case1"></div>
+      <div class="field" id="case2"></div>
+      <div class="field" id="case3"></div>
+      <div class="field" id="case4"></div>
+      <div class="field" id="case5"></div>
+      <div class="field" id="case6"></div>
+      <div class="field" id="case7"></div>
+      <div class="field" id="case8"></div>
+      <div class="field" id="case9"></div>
+      <div class="field" id="case10"></div>
+    </div>
+
+    <div class="fieldRow">
+      <div class="field" id="case11"></div>
+      <div class="field" id="case12"></div>
+      <div class="field" id="case13"></div>
+      <div class="field" id="case14"></div>
+      <div class="field" id="case15"></div>
+      <div class="field" id="case16"></div>
+      <div class="field" id="case17"></div>
+      <div class="field" id="case18"></div>
+      <div class="field" id="case19"></div>
+      <div class="field" id="case20"></div>
+    </div>
+
+    <div class="fieldRow">
+      <div class="field" id="case21"></div>
+      <div class="field" id="case22"></div>
+      <div class="field" id="case23"></div>
+      <div class="field" id="case24"></div>
+      <div class="field" id="case25"></div>
+      <div class="field" id="case26"></div>
+      <div class="field" id="case27"></div>
+      <div class="field" id="case28"></div>
+      <div class="field" id="case29"></div>
+      <div class="field" id="case30"></div>
+    </div>
+
+    <div class="fieldRow">
+      <div class="field" id="case31"></div>
+      <div class="field" id="case32"></div>
+      <div class="field" id="case33"></div>
+      <div class="field" id="case34"></div>
+      <div class="field" id="case35"></div>
+      <div class="field" id="case36"></div>
+      <div class="field" id="case37"></div>
+      <div class="field" id="case38"></div>
+      <div class="field" id="case39"></div>
+      <div class="field" id="case40"></div>
+    </div>
+
+    <div class="fieldRow">
+      <div class="field" id="case41"></div>
+      <div class="field" id="case42"></div>
+      <div class="field" id="case43"></div>
+      <div class="field" id="case44"></div>
+      <div class="field" id="case45"></div>
+      <div class="field" id="case46"></div>
+      <div class="field" id="case47"></div>
+      <div class="field" id="case48"></div>
+      <div class="field" id="case49"></div>
+      <div class="field" id="case50"></div>
+    </div>
+
+    <div class="fieldRow">
+      <div class="field" id="case51"></div>
+      <div class="field" id="case52"></div>
+      <div class="field" id="case53"></div>
+      <div class="field" id="case54"></div>
+      <div class="field" id="case55"></div>
+      <div class="field" id="case56"></div>
+      <div class="field" id="case57"></div>
+      <div class="field" id="case58"></div>
+      <div class="field" id="case59"></div>
+      <div class="field" id="case60"></div>
+    </div>
+
+    <div class="fieldRow">
+      <div class="field" id="case61"></div>
+      <div class="field" id="case62"></div>
+      <div class="field" id="case63"></div>
+      <div class="field" id="case64"></div>
+      <div class="field" id="case65"></div>
+      <div class="field" id="case66"></div>
+      <div class="field" id="case67"></div>
+      <div class="field" id="case68"></div>
+      <div class="field" id="case69"></div>
+      <div class="field" id="case70"></div>
+    </div>
+
+    <div class="fieldRow">
+      <div class="field " id="case71"></div>
+      <div class="field" id="case72"></div>
+      <div class="field" id="case73"></div>
+      <div class="field" id="case74"></div>
+      <div class="field" id="case75"></div>
+      <div class="field" id="case76"></div>
+      <div class="field" id="case77"></div>
+      <div class="field" id="case78"></div>
+      <div class="field" id="case79"></div>
+      <div class="field" id="case80"></div>
+    </div>
+
+    <div class="fieldRow">
+      <div class="field" id="case81"></div>
+      <div class="field" id="case82"></div>
+      <div class="field" id="case83"></div>
+      <div class="field" id="case84"></div>
+      <div class="field" id="case85"></div>
+      <div class="field" id="case86"></div>
+      <div class="field" id="case87"></div>
+      <div class="field" id="case88"></div>
+      <div class="field" id="case89"></div>
+      <div class="field" id="case90"></div>
+    </div>
+ </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,200 @@
+﻿body{
+	background: #eeeeec;	
+}
+
+span, input, .playerNameDesign, div{
+	font-family: 'Kaushan Script', cursive;
+}
+
+li {
+	color: #57625f	
+}
+
+/**
+ * Bord
+ * ----------------------------------------------------------------------------
+ */
+
+.board {
+	margin-bottom: 30px;
+}
+
+.fieldRow {
+	background: #8ba5a2;
+	display: table;
+	table-layout: fixed;
+	border-spacing: 1px;
+	width: 550px;
+	height: 55px;
+	margin: 0 auto;
+}
+
+.field {
+	background: #e6f0f0;
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+}
+
+/**
+ * Games Pieces
+ * ----------------------------------------------------------------------------
+ */
+
+.mountainDesign {
+	color: #73858a;
+	font-size: 32px;
+}
+
+.firstPlayerDesign {
+	color: #5d6e7e;
+	font-size: 32px;
+}
+
+.secondPlayerDesign {
+	color: #849171;
+	font-size: 32px;
+}
+
+.weaponDesign {
+	color: #988484;
+	font-size: 32px;
+}
+
+/**
+ * Navigation
+ * ----------------------------------------------------------------------------
+ */
+ 
+.player1Name{
+	color: #5d6e7e;
+}
+
+.player2Name{
+	color: #849171;
+}
+
+.navbarBeamDesign {
+	background-color: #ebf6ec;
+	margin-bottom: 30px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	padding-left: 60px;
+	min-width: 1200px;
+}
+
+.buttonDesign {
+	font-size: 24px;
+	min-width: 60px;
+	min-height: 54px;
+	margin-right: 5px;
+	color: #57625f;
+	background-color: #eaeaea;
+	box-shadow: 0 0 0 1px #d6d6d6 inset, 0 0 0 2px rgba(242,242,242,0.15) inset, 0 1px 0 0 #c9c9c9, 0 1px 0 1px rgba(128,128,128,0.4), 0 1px 1px 1px rgba(89,89,89,0.5);
+}
+
+.weaponBorderDesign{
+	border: 2px solid;
+	border-radius: 5px;
+	margin: 5px 10px;
+	min-width: 60px;
+	min-height: 55px;
+    text-align: center;
+}
+
+.weaponBorderPlayer1 {
+	border-color: #5d6e7e;
+}
+
+.weaponBorderPlayer2 {
+	border-color: #849171;
+}
+
+.progressDesign {
+	width: 100px;
+	margin-top: 15px;
+	height: 30px;
+}
+
+.progressBarDesign{
+	background-color: #ba6a6a;
+	color: #212529;
+	font-size: 15px;
+}
+
+.playerNameDesign {
+	padding: 10px 0px;
+	font-size: 24px;
+	margin-left: 10px;
+	margin-right: 0px;
+}
+
+.heartDesign {
+	color: #d28686;
+	font-size: 36px;
+	margin-top: 10px;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+.possibleMoving{
+	background-color: #a9efef !important; //	
+}
+
+/**
+ * Overlay
+ * ----------------------------------------------------------------------------
+ */
+
+.overlayBackgroundDesign{	
+	position: fixed;
+	display: none;
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	background-color: rgba(238,238,236,0.7);
+	z-index: 3;	
+}
+
+.overlayDesign {
+	width: 500px;
+	background-color: #e1f0e3;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	color: white;
+	transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+}
+
+.overlayButtonDesign{
+	font-size: 24px;
+	min-width: 100px;
+	min-height: 30px;
+	margin-right: 5px;
+	color: #57625f;
+	background-color: #eaeaea;
+	box-shadow: 0 0 0 1px #d6d6d6 inset, 0 0 0 2px rgba(242,242,242,0.15) inset, 0 1px 0 0 #c9c9c9, 0 1px 0 1px rgba(128,128,128,0.4), 0 1px 1px 1px rgba(89,89,89,0.5);
+}
+
+.formDesign{
+	margin-top: 5%;
+	text-align: left;
+	font-size: 20px;
+	color: #57625f;
+}
+
+.inputDesign{
+	font-size: 20px;
+}
+
+.buttonDeath{
+	margin: 3% auto;
+}
+
+.textDeath {
+	text-align: center
+}
