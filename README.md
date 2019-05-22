@@ -1,4 +1,4 @@
-#  turn-based board game written in JavaScript and jQuery
+#  Turn-Based Board Game Written in JavaScript and jQuery
 
 Online game  in which 2 players play each turn to compete.
 
