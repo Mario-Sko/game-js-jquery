@@ -1,5 +1,7 @@
 #  Turn-Based Board Game Written in JavaScript and jQuery
 
+This is my project from the Unit 6 of my frond-end developer study at the Openclassrooms.
+
 Online game  in which 2 players play each turn to compete.
 
 - Randomly generating the game map. Each box can be either: Empty or Unavailable (dimmed).
