@@ -1,6 +1,6 @@
 #  Turn-Based Board Game Written in JavaScript and jQuery
 
-This is my project from the Unit 6 of my frond-end developer study at the Openclassrooms.
+This is my project from the unit 6 of my frond-end developer study at the OpenClassrooms.
 
 Online game  in which 2 players play each turn to compete.
 
